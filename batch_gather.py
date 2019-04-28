@@ -11,7 +11,7 @@ def batch_gather(params, indices, axis, name=None):
     This operation assumes that the leading dimensions of `indices` are dense,
     and the gathers on the axis corresponding to the last dimension of `indices`.
     More concretely it computes:
-    result[i1, ..., in, j1, ..., jk] = params[i1, ..., in, indices[i1, ..., in, j1, ..., jk]]
+    `result[i1, ..., in, j1, ..., jm, k1, ...., kl] = params[i1, ..., in, indices[i1, ..., in, j1, ..., jm], k1, ..., kl]`
     Therefore `params` should be a Tensor of shape [A1, ..., AN, C0, B1, ..., BM],
     `indices` should be a Tensor of shape [A1, ..., AN, C1, ..., CK] and `result` will be
     a Tensor of size `[A1, ..., AN, C1, ..., CK, B1, ..., BM]`.
