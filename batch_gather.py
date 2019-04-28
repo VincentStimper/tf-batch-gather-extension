@@ -5,7 +5,8 @@ from tensorflow.python.ops import gen_math_ops
 def batch_gather(params, indices, axis, name=None):
     """
     Extension of the batch_gather function in tensorflow
-    (see https://github.com/tensorflow/tensorflow/blob/r1.13/tensorflow/python/ops/array_ops.py)
+    (see https://github.com/tensorflow/tensorflow/blob/r1.13/tensorflow/python/ops/array_ops.py
+    or https://www.tensorflow.org/api_docs/python/tf/batch_gather)
     Gather slices from `params` according to `indices` with leading batch dims.
     This operation assumes that the leading dimensions of `indices` are dense,
     and the gathers on the axis corresponding to the last dimension of `indices`.
