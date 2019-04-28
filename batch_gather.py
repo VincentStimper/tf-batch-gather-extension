@@ -2,7 +2,7 @@ import tensorflow as tf
 from tensorflow.python.framework import ops
 from tensorflow.python.ops import gen_math_ops
 
-def tf_batch_gather(params, indices, axis, name=None):
+def batch_gather(params, indices, axis, name=None):
     """
     Extension of the batch_gather function in tensorflow
     (see https://github.com/tensorflow/tensorflow/blob/r1.13/tensorflow/python/ops/array_ops.py)
